@@ -27,3 +27,28 @@ The Person Check App is a Python-based application designed to detect people in 
 3. Install the required dependencies:
    ```bash
    pip install -r requirements.txt
+
+      ```
+   
+## How to Start the App
+
+To start the Person Check App, follow these steps:
+
+1. **Run the Application**  
+   Start the FastAPI server by executing the following command in the terminal:
+   ```bash
+   python app.py
+   ```
+
+2. **Access the Web Interface**  
+   Open your browser and navigate to [http://http://127.0.0.1:8000:](http://127.0.0.1:8000).  
+   From here, you can:
+   - Start or stop the camera.
+   - View and manage captured photos.
+   - Configure detection settings if needed.
+
+3. **Stop the Application**  
+   To stop the app, press `Ctrl+C` in the terminal where the server is running.
+
+By following these steps, you can easily start and use the Person Check App.
+```
