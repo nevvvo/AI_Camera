@@ -51,13 +51,6 @@ def create_table():
     conn.commit()
     conn.close()
 
-def clear_db():
-    conn = sqlite3.connect('db/photos.db')
-    cursor = conn.cursor()
-    cursor.execute("DELETE FROM photos")
-    conn.commit()
-    conn.close()
-
 def save_photo_to_db(filename):
     created_at = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     conn = get_db_connection()
