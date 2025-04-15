@@ -181,7 +181,5 @@ def read_root():
     photo_urls = [f"/{photo['filename']}" for photo in photos]
     return templates.TemplateResponse("root_page.html", {"request": {}, "photo_urls": photo_urls})
 
-clear_db()
-
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
