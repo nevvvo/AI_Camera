@@ -20,9 +20,7 @@ templates = Jinja2Templates(directory="templates")
 camera_source = 0  
 photo_path = "static/photos"  
 camera_running = False
-last_camera_start_time = 0
 mp_face_detection = mp.solutions.face_detection
-mp_drawing = mp.solutions.drawing_utils
 
 if not os.path.exists(photo_path):
     os.makedirs(photo_path)
