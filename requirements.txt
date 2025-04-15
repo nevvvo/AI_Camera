@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+jinja2
+--only-binary :all:
+opencv-python
+mediapipe
