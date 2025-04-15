@@ -143,7 +143,7 @@ def get_filtered_photos(start_date: str = "", end_date: str = ""):
 
 @app.get("/start", response_class=HTMLResponse)
 def show_start_page():
-    return templates.TemplateResponse("start_page.html", {"request": {}, "button_text": "Запустить камеру", "action_url": "/start"})
+    return templates.TemplateResponse("start_page.html", {"request": {}, "button_text": "Start camera", "action_url": "/start"})
 
 @app.post("/start", summary="Launch the camera", response_description="Camera launch status")
 def start_camera():
@@ -157,7 +157,7 @@ def start_camera():
 
 @app.get("/stop", response_class=HTMLResponse)
 def show_stop_page():
-    return templates.TemplateResponse("stop_page.html", {"request": {}, "button_text": "Остановить камеру", "action_url": "/stop"})
+    return templates.TemplateResponse("stop_page.html", {"request": {}, "button_text": "Stop camera", "action_url": "/stop"})
 
 @app.post("/stop", summary="Stop the camera", response_description="Camera stop status")
 def stop_camera():

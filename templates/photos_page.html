@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Фотографии с камеры</title>
+    <title>Photos from camera</title>
 </head>
 <body>
-    <h1>Фотографии с камеры</h1>
+    <h1>Photos from camera</h1>
     
     <!-- Форма для фильтрации -->
     <form action="/humans" method="get">
-        <label for="start_date">Дата начала:</label>
+        <label for="start_date">Start date:</label>
         <input type="date" id="start_date" name="start_date">
-        <label for="end_date">Дата конца:</label>
+        <label for="end_date">End date:</label>
         <input type="date" id="end_date" name="end_date">
-        <button type="submit">Применить фильтр</button>
+        <button type="submit">Apply a filter</button>
     </form>
     
-    <h2>Фотографии</h2>
+    <h2>Photos</h2>
     <div>
         {% for photo in photos %}
             <img src="/{{ photo.filename }}" width="300px" />
