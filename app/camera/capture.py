@@ -4,7 +4,7 @@ import cv2
 import mediapipe as mp
 from datetime import datetime
 from app.db.database import save_photo_to_db
-from app.camera.settings import camera_source, photo_path, area
+from app.camera.settings import camera_source, area
 import os
 
 camera_running = False
