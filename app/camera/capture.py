@@ -21,7 +21,7 @@ def save_photo(image):
 def capture_and_save():
     global camera_running
     detection_start_time = None
-    person_in_frame = False
+    person_in_frame = True
     cap = cv2.VideoCapture(camera_source)
     
     if not cap.isOpened():
@@ -42,9 +42,9 @@ def capture_and_save():
             results = face_detection.process(rgb_frame)
 
             if results.detections:
-                if not person_in_frame:
+                if person_in_frame:
                     print("Человек обнаружен в кадре")
-                    person_in_frame = True
+                    person_in_frame = False
 
                 if detection_start_time is None:
                     detection_start_time = time.time()
@@ -53,9 +53,9 @@ def capture_and_save():
                     save_photo(frame_resized)
                     detection_start_time = time.time()
             else:
-                if person_in_frame:
+                if not person_in_frame:
                     print("Человек ушел из кадра")
-                    person_in_frame = False
+                    person_in_frame = True
                 detection_start_time = None
 
             time.sleep(0.5)
