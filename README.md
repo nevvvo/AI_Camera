@@ -2,7 +2,7 @@
 
 The Person Check App is a Python-based application designed to detect people in a camera frame and automatically save snapshots. It uses FastAPI for the backend, OpenCV for image processing, and MediaPipe for person detection.
 
-## Возможности
+## Features
 
 **Camera Control**: Start and stop the camera through a user-friendly web interface.
 **Person Detection**: Automatically captures photos when a person is detected in the frame for a specified duration.
