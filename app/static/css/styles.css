@@ -1,9 +1,8 @@
-/* Новый стиль для navbar */
 .navbar {
     padding: 12px 24px;
     display: flex;
-    justify-content: center;  /* Центрируем по горизонтали */
-    align-items: center;      /* Центрируем по вертикали */
+    justify-content: center; 
+    align-items: center;     
     gap: 20px;
     position: sticky;
     top: 0;
@@ -11,7 +10,6 @@
 }
 
 
-/* Сами кнопки меню */
 .nav-button {
     color: white;
     text-decoration: none;
@@ -24,13 +22,11 @@
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Hover эффект */
 .nav-button:hover {
     background: rgba(255, 255, 255, 0.3);
     transform: scale(1.05);
 }
 
-/* Опционально: активная кнопка */
 .nav-button.active {
     background: rgba(255, 255, 255, 0.4);
     font-weight: bold;
@@ -96,7 +92,6 @@ input, button {
 }
 
 
-/* Общая обёртка */
 html, body {
     height: 100%;
     margin: 0;
@@ -114,7 +109,6 @@ main {
     padding: 2em;
 }
 
-/* Стили шапки */
 header {
     background-color: #0d6efd;
     color: white;
@@ -128,7 +122,6 @@ nav a {
     text-decoration: none;
 }
 
-/* Подвал */
 footer {
     background-color: #f1f1f1;
     text-align: center;

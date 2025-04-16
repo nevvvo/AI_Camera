@@ -3,7 +3,7 @@
 {% block title %}Главная{% endblock %}
 
 {% block content %}
-    <h2>Последние фотографии</h2>
+    <h2>Last photos</h2>
 
     {% if photo_urls %}
         <div class="photo-grid">
@@ -14,6 +14,6 @@
             {% endfor %}
         </div>
     {% else %}
-        <p>Фотографий пока нет.</p>
+        <p>There are no photos yet.</p>
     {% endif %}
 {% endblock %}

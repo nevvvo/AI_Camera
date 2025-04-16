@@ -2,17 +2,17 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}Система камер{% endblock %}</title>
+    <title>{% block title %}Camera system{% endblock %}</title>
     <link rel="stylesheet" href="/static/css/styles.css">
 </head>
 <body>
     <div class="wrapper">
         <header>
             <nav class = "navbar">
-                <a href="/" class="nav-button {% if request.url.path == '/' %}active{% endif %}">Главная</a>
-                <a href="/start" class="nav-button {% if request.url.path.startswith('/start') %}active{% endif %}">Старт</a>
-                <a href="/stop" class="nav-button {% if request.url.path.startswith('/stop') %}active{% endif %}">Стоп</a>
-                <a href="/humans" class="nav-button {% if request.url.path.startswith('/humans') %}active{% endif %}">Галерея</a>
+                <a href="/" class="nav-button {% if request.url.path == '/' %}active{% endif %}">Main page</a>
+                <a href="/start" class="nav-button {% if request.url.path.startswith('/start') %}active{% endif %}">Start camera</a>
+                <a href="/stop" class="nav-button {% if request.url.path.startswith('/stop') %}active{% endif %}">Stop camera</a>
+                <a href="/humans" class="nav-button {% if request.url.path.startswith('/humans') %}active{% endif %}">Gallery</a>
 
             </nav>
         </header>
@@ -22,7 +22,7 @@
         </main>
 
         <footer>
-            <p>© 2025 AI камера</p>
+            <p>© 2025 AI camera</p>
         </footer>
     </div>
 </body>

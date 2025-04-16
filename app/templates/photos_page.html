@@ -3,12 +3,12 @@
 {% block title %}Фотографии{% endblock %}
 
 {% block content %}
-    <h2>Фотографии</h2>
+    <h2>Photos</h2>
 
     <form method="get">
-        <label>С: <input type="date" name="start_date" value="{{ request.query_params.get('start_date', '') }}"></label>
-        <label>По: <input type="date" name="end_date" value="{{ request.query_params.get('end_date', '') }}"></label>
-        <button type="submit">Фильтровать</button>
+        <label>From: <input type="date" name="start_date" value="{{ request.query_params.get('start_date', '') }}"></label>
+        <label>To: <input type="date" name="end_date" value="{{ request.query_params.get('end_date', '') }}"></label>
+        <button type="submit">Filter</button>
     </form>
 
     {% if photos %}
@@ -21,6 +21,6 @@
             {% endfor %}
         </div>
     {% else %}
-        <p>Нет доступных фотографий.</p>
+        <p>There are no photos available.</p>
     {% endif %}
 {% endblock %}

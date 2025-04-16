@@ -11,12 +11,12 @@ camera_running = False
 
 def save_photo(image):
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    filename_only = f"photos/photo_{timestamp}.jpg"  # <--- относительный путь от static
+    filename_only = f"photos/photo_{timestamp}.jpg"
     full_path = os.path.join("app/static", filename_only)
 
     print(f"Saving photo: {full_path}")
     cv2.imwrite(full_path, image)
-    save_photo_to_db(filename_only)  # сохраняем только относительный путь
+    save_photo_to_db(filename_only) 
 
 def capture_and_save():
     global camera_running
