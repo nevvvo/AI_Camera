@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Фотографии{% endblock %}
+
+{% block content %}
+    <h2>Фотографии</h2>
+
+    <form method="get">
+        <label>С: <input type="date" name="start_date" value="{{ request.query_params.get('start_date', '') }}"></label>
+        <label>По: <input type="date" name="end_date" value="{{ request.query_params.get('end_date', '') }}"></label>
+        <button type="submit">Фильтровать</button>
+    </form>
+
+    {% if photos %}
+        <div class="photo-grid">
+            {% for photo in photos %}
+                <div class="photo-card">
+                    <img src="/static/{{ photo.filename }}" alt="Фото">
+                    <p>{{ photo.created_at }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>Нет доступных фотографий.</p>
+    {% endif %}
+{% endblock %}

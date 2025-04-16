@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+    <h2>Последние фотографии</h2>
+
+    {% if photo_urls %}
+        <div class="photo-grid">
+            {% for url in photo_urls %}
+                <div class="photo-card">
+                    <img src="{{ url }}" alt="Фото">
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>Фотографий пока нет.</p>
+    {% endif %}
+{% endblock %}
