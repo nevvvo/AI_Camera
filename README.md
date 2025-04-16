@@ -9,33 +9,6 @@ The Person Check App is a Python-based application designed to detect people in 
 **Photo Management**: View and filter saved photos by date through the web interface.
 **Data Storage**: Stores captured photos and metadata in an SQLite database for easy access and management.
 
-## Structure
-
-app/
-├── camera/
-│   ├── capture.py           # Contains the camera logic and methods for capturing photos.
-│   └── setting.py           # Stores configuration settings, such as the detection area.
-├── db/
-│   ├── database.py          # Contains database connection logic and methods for storing photo metadata.
-│   └── photos.db            # SQLite database file for storing photo metadata.
-├── routes/
-│   ├── camera_routes.py     # FastAPI routes for starting and stopping the camera.
-│   └── photo_routes.py      # FastAPI routes for viewing and filtering saved photos.
-├── static/
-│   └── css/
-│       └── styles.css       # Contains the CSS styles for the web interface.
-├── templates/
-│   ├── base.html            # Base HTML template used by all pages.
-│   ├── photos_page.html     # Displays saved photos with filtering options.
-│   ├── root_page.html       # Shows recent photos and the application status.
-│   ├── start_page.html      # Page for starting the camera.
-│   └── stop_page.html       # Page for stopping the camera.
-├── setting.json             # Configuration file defining the frame area for person detection.
-├── main.py                  # Interface for stopping the camera.
-├── run.py                   # The entry point for launching the FastAPI application.
-├── requirements.txt         # Project dependencies.
-└── README.md                # This file.
-
 ## Installation
 
 1. Ensure Python 3.9 or higher is installed on your system.
